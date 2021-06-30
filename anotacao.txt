@@ -1,0 +1,23 @@
+*OBS
+	- Tuda variavel/array que usarmos no sistema para armarzenar informações, iremos criar uma classe para substituir
+
+Repository
+	- Responsável por lidar com os métodos referente ao MODEL, então se formos fazer alguma ação no banco, precisamos fazer no repository
+
+Arquitetura
+--- DTO = Data Transfer Object
+	- é um modelo para quando for transferir dados de um arquivo para outro
+	- normalmente quando enviado no parametro da função objeto, podemos usar uma interface
+	para termos um controle de quem vai utilizar nosso método
+	- Parametro Nomeados: quem utiliza nosso método, do tipo create() os parametros passados será via objeto
+
+* Rota
+	#Deve apenas receber a requisição, chamar outro arquivo para tratar a requisição e retornar uma resposta
+
+*** APLICANDO SOLID ***
+
+	# ROTA
+	- Primeiramente verificar no codigo em ROTAS o que é REGRA DE NEGOCIO e TRANSFORMAÇÃO DE DADOS
+	lembrando que nossa ROTA nao deve se preocupar com lógica, podemos deixar a transformação de dados nela e só tratar a LÓGICA/REGRA  DE NEGOCIO no SERVICE
+
+	# SERVICE
